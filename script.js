@@ -1,17 +1,20 @@
-var searchBtn = document.getElementById("search-btn");
+var searchBtn = document.getElementById("search-button");
 var searchHistoryDiv = document.getElementById("search-history-div");
 var searchBar = document.getElementById("search-bar");
 var apiKey = "6d3eebb8385c27dd48a391051273f03c";
 var searchedArray = [];
 //first attempt at dynamic button creation. technically correct, but more complicated.
-searchBtn.addEventListener("click", function () {
-  console.log("search button works");
-//   var createdHistoryBtns = document.createElement("a");
-//   createdHistoryBtns.innerText = searchBar.value;
-//   createdHistoryBtns.classList.add("btn", "btn-primary");
-//   createdHistoryBtns.setAttribute("href"); //<---Put the URLs for each ajax call here
-    addCity(searchBar.value);
-});
+
+searchBtn.addEventListener("click", addButton)
+
+function addButton(){
+  console.log("button works!");
+  // var createdHistoryBtns = document.createElement("a");
+  // createdHistoryBtns.innerText = searchBar.value;
+  // createdHistoryBtns.classList.add("btn", "btn-primary");
+  // createdHistoryBtns.setAttribute("href"); //<---Put the URLs for each ajax call here
+  //   addCity(searchBar.value);
+};
 
 function showButtons(){
     $("#search-history-div").empty();
